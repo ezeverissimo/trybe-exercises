@@ -10,6 +10,8 @@
       <section id="terceiroFilho"></section>
       <section id="quartoEUltimoFilho"></section>
       <script>
+
+          // PRIMEIRA PARTE
         document.getElementById("elementoOndeVoceEsta");
         document.getElementById("elementoOndeVoceEsta").parentElement.style.color = "red";
         document.getElementById("primeiroFilhoDoFilho").innerText = "Teste";
@@ -17,6 +19,32 @@
         document.getElementById("elementoOndeVoceEsta").previousElementSibling;
         document.getElementById("elementoOndeVoceEsta").nextSibling.nextSibling;
         document.getElementById("pai").childNodes[7];
+
+        // SEGUNDA PARTE
+        let pai = document.getElementById("pai");
+        let irmao = document.createElement('h1');
+        irmao.innerText = 'irmao';
+        pai.appendChild(irmao);
+        let ondeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+        let filho = document.createElement('h2');
+        filho.innerText = 'filho';
+        ondeVoceEsta.appendChild(filho);
+        let primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho");
+        let filhoDoFilho = document.createElement('h2');
+        filhoDoFilho.innerText = "filho do filho";
+        primeiroFilhoDoFilho.appendChild(filhoDoFilho);
+        document.getElementById("elementoOndeVoceEsta").parentElement.childNodes[7];
+
+        // TERCEIRA PARTE
+
+        let priFilho = document.getElementById('primeiroFilho');
+        let pai = document.getElementById('pai');
+        pai.removeChild(priFilho);
+        let terceiro = document.getElementById('terceiroFilho');
+        pai.removeChild(terceiro);
+        let quarto = document.getElementById('quartoEUltimoFilho');
+        pai.removeChild(quarto);
+
       </script>
     </section>
   </main>
