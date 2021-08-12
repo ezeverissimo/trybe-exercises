@@ -61,6 +61,7 @@
             let h1 = document.createElement('h1');
             h1.innerText = textoPrincipal;
             document.body.appendChild(h1);
+            return h1
         }
         topText("Exercício 5.2 - JavaScript DOM");
 
@@ -104,8 +105,14 @@
 
         for (let index = 0; index < quantidadeH3; index += 1 ) {
             let h3 = document.createElement('h3')
+            h3.classList = 'description'
             main.appendChild(h3);
         }
+
+        // PARTE 2
+
+        h1 = document.getElementsByTagName('h1');
+        h1.className = 'tittle';
     </script>
   </body>
 </html>
