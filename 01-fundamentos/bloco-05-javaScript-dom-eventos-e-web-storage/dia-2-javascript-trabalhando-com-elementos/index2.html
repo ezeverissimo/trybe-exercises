@@ -92,14 +92,16 @@
         function lista(array){
             let listaNaoOrdenada = document.createElement('ul');
             sectionRight.appendChild(listaNaoOrdenada);
+            listaNaoOrdenada.className = 'ulList'
             for (let index = 0; index < array.length; index += 1) {
                 let li = document.createElement('li');
                 let lista = array[index]
                 li.innerText = lista;
+                li.className = 'lista-1-ao-10';
                 listaNaoOrdenada.appendChild(li);
             }
         }
-        lista (['um, dois, três, quatro, cinco, seis, sete, oito, nove, dez'])
+        lista (['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']);
 
         let quantidadeH3 = 3;
 
@@ -113,6 +115,18 @@
 
         h1 = document.getElementsByTagName('h1');
         h1.className = 'tittle';
+
+        main.removeChild(sectionLeft);
+
+        sectionRight.style = 'margin-right: auto'
+
+        section.parentNode.style.background = 'green'
+
+        let ulList = document.getElementsByClassName('ulList')
+
+        for (let index = 0; index < 2; index += 1) {
+          ulList.removeChild(ulList.lastElementChild);
+        }
     </script>
   </body>
 </html>
