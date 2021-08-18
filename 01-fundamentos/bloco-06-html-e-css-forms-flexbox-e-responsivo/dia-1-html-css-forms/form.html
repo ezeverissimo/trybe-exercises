@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body> 
+    <header>
+        <h1>Criando um formulário de currículo.</h1>
+    </header>
+    <form action="">
+        <fieldset>
+            <h2>Quem sou eu e onde moro</h2>
+            <div class="area-pessoa-local">
+                <label for="">Nome
+                    <input id="name-input" type="text" maxlength="40" required>
+                </label>
+            </div>
+            <br>
+            <div class="area-pessoa-local">
+                <label for="email-input">E-mail
+                    <input id="email-input" type="email" max="50" required>
+                </label>
+            </div>
+            <div class="area-pessoa-local">
+                <label for="cpf-input">CPF
+                    <input id="cpf-input" type="text" max="11" min="11" required>
+                </label>
+            </div>
+            <div class="area-pessoa-local">
+                <label for="endereco-input">Endereço
+                    <input id="endereco-input" type="text" max="200" required>
+                </label>
+            </div>
+            <div class="area-pessoa-local">
+                <label for="cidade-input">Cidade
+                    <input id="cidade-input" type="text" max="28" required>
+                </label>
+            </div>
+            <div class="area-pessoa-local">
+                <label for="estado-input">Estado
+                    <select name="estado" id="estado-input"></select>
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h2>Meu histórico de trabalho.</h2>
+            <div>
+                <label for="">Resumo do currículo
+                    <textarea name="" id="textarea-input" cols="100" rows="10" max="1000" required></textarea>
+                </label>
+            </div>
+            <div>
+                <label for="">Cargo
+                    <input type="text" max="40" required>
+                </label>
+            </div>
+            <div>
+                <label for="">Descrição do cargo
+                    <input type="text" name="" id="" max="500" required>
+                </label>
+            </div>
+            <div>
+                <label for="">Data de início
+                    <input type="date" required>
+                </label>
+            </div>
+        </fieldset>
+        <button type="submit" id="envia-formulario">Enviar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
