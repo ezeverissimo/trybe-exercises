@@ -1,5 +1,5 @@
 function criaEstados() {
-    const estadosBrasil = ['Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal','Espirito Santo','Goiás','Maranhão','Mato Grosso do Sul','Mato Grosso','Minas Gerai','Pará','Paraíba','Paraná','Pernambuco','Piauí','Rio de Janeiro','Rio Grande do Norte','Rio Grande do Sul','Rondônia','Roraima','Santa Catarina','São Paulo','Sergipe','Tocantins'];
+    const estadosBrasil = ['Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal','Espirito Santo','Goiás','Maranhão','Mato Grosso do Sul','Mato Grosso','Minas Gerais','Pará','Paraíba','Paraná','Pernambuco','Piauí','Rio de Janeiro','Rio Grande do Norte','Rio Grande do Sul','Rondônia','Roraima','Santa Catarina','São Paulo','Sergipe','Tocantins'];
     const siglasEstado = ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MS','MT','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'];
     const selectEstados = document.getElementById('estado-input');
     
@@ -12,4 +12,12 @@ function criaEstados() {
 }
 criaEstados();
 
+const botaoEnviar = document.getElementById('envia-formulario');
+let forms = document.getElementById('forms');
 
+function interrompeFluxo(event) {
+    console.log('teste');
+    event.preventDefault();
+}
+
+botaoEnviar.addEventListener('click', interrompeFluxo);
