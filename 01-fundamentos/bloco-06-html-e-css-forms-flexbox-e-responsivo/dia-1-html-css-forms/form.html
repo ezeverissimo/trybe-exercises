@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body> 
+    <header class="curriculo-header">
+        <h1>Criando um formulário de currículo.</h1>
+    </header>
+    <form action="" class="area-pessoa-local">
+        <fieldset class="area-pessoa-local">
+            <h2>Quem sou eu e onde moro</h2>
+            <div class="all-box">
+                <label for="">Nome
+                    <input id="name-input" name="nome" type="text" maxlength="40" required>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="email-input">E-mail
+                    <input id="email-input" name="email-input" type="email" maxlength="50" required>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="cpf-input">CPF
+                    <input id="cpf-input" name="cpf-input" type="text" maxlength="11" minlength="11" required>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="endereco-input">Endereço
+                    <input id="endereco-input" name="endereco-input" type="text" maxlength="200" required>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="cidade-input">Cidade
+                    <input id="cidade-input" name="cidade-input" type="text" maxlength="28" required>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="estado-input">Estado
+                    <select name="estado" id="estado-input"></select>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="input-casa">
+                    <input type="radio" name="residencia" value="Casa" id="input-casa" required>Casa
+                </label>
+                <label for="input-apartamento">
+                    <input type="radio" name="residencia" value="Apartamento" id="input-apartamento" required>Apartamento
+                </label>
+            </div>
+        </fieldset>
+        <fieldset class="area-pessoa-local">
+            <h2>Meu histórico de trabalho.</h2>
+            <div class="all-box">
+                <label for="textarea-input">Resumo do currículo
+                    <textarea name="textarea-input" id="textarea-input" rows="10" maxlength="1000" required></textarea>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="cargo-input">Cargo
+                    <input type="text" name="cargo-input" id="cargo-input" maxlength="40" required>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="descricao-cargo">Descrição do cargo
+                    <input type="text" name="descricao-cargo" id="descricao-cargo" maxlength="500" required>
+                </label>
+            </div>
+            <div class="all-box">
+                <label for="data-input">Data de início
+                    <input type="date" name="data-input" required>
+                </label>
+            </div>
+        </fieldset>
+        <button type="submit" id="envia-formulario">Enviar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
