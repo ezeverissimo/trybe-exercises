@@ -97,8 +97,21 @@ const expectedResult = [
         author: autor.author.name,
       }
     ));
-    authorAndAge.sort((obj1, obj2) => obj1.age - obj2.age)
-    return authorAndAge
+    authorAndAge.sort((obj1, obj2) => obj1.age - obj2.age);
+    return authorAndAge;
   }
-  
+  console.log(nameAndAge());
+
   assert.deepStrictEqual(nameAndAge(), expectedResult);
+
+  // function nameAndAge() {
+  //   const authorAndAge = books.map((autor) => {
+  //     return {
+  //       age: autor.releaseYear - autor.author.birthYear, 
+  //       author: autor.author.name,
+  //     }
+  //   });
+  //   authorAndAge.sort((obj1, obj2) => obj1.age - obj2.age);
+  //   return authorAndAge;
+  // }
+  // console.log(nameAndAge());
