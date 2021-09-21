@@ -14,11 +14,22 @@ const createArray = () => {
   return sumArray;
 }
 
+const arrayDiv = (number) => {
+  const div = [];
+  div.push(number / 2);
+  div.push(number / 3);
+  div.push(number / 5);
+  div.push(number / 10);
+  return div;
+}
+
 const fetchPromice = (randomNumber) => {
-  const verifyPromise = new Promise((resolve, reject) => (randomNumber < 8000) ? resolve() : reject())
+  const verifyPromise = new Promise((resolve, reject) => (randomNumber < 8000) ? resolve(randomNumber) : reject())
   verifyPromise
-  .then(() => console.log('Promise resolvida'))
-  .catch(() => console.log('Promise rejeitada'))
+  .then((result => arrayDiv(result)))
+  .then((result => result.reduce((acc, number) => acc + number)))
+  .then((result => console.log(result)))
+  .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'))
 };
 fetchPromice(createArray());
 
