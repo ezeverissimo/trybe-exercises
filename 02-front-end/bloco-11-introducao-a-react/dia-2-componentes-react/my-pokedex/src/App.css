@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  width: 25%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.pokemon {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+
+}
+
+h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+p {
+  padding-bottom: 5px;
+}
