@@ -5,26 +5,22 @@ import './App.css';
 não é a maneira correta de se criar eventos
 em React! A função se refere ao componente,
 então deve ser parte de sua classe! */
-function handleClick1() {
-  console.log('Clicou no botão! 1')
-}
-function handleClick2() {
-  console.log('Clicou no botão! 2')
-}
-function handleClick3() {
-  console.log('Clicou no botão! 3')
-}
 
 class App extends React.Component {
-  /* Repare que, diferentemente do HTML, no
-  JSX você associa uma função a um evento
-  passando a própria função entre chaves `{}` */
+  
+  constructor() {
+    super()
+    this.handleClick1 = this.handleClick1.bind(this);
+  }
+
+  handleClick1() {
+    console.log('Clicou no botão! 1')
+    console.log(this);
+  }
   render() {
     return (
       <div>
-        <button onClick={handleClick1}>Meu botão</button>
-        <button onClick={handleClick2}>Meu botão</button>
-        <button onClick={handleClick3}>Meu botão</button>
+        <button onClick={this.handleClick1}>Meu botão</button>
       </div>
     )
   }
