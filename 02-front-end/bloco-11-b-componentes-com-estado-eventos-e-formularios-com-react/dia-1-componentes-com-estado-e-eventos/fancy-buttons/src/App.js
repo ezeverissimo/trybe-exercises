@@ -20,6 +20,12 @@ class App extends React.Component {
     this.setState((berforeState, _props) => ({
       clicks: berforeState.clicks + 1
     }))
+    let quantClick = this.state.clicks;
+    if (quantClick % 2 === 0) {
+      console.log('impar');
+    } else {
+      console.log('par');
+    }
   }
   render() {
     return <button onClick={this.handleClick}>{this.state.clicks}</button>
