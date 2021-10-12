@@ -7,8 +7,8 @@ class PessoalStates extends React.Component {
     return (
       <label htmlFor="states">Estados
         <select className="states" name="states">
-          {allStates.map(({ value, label }) => (
-          <option key={idGenerator()} value={value}>{label}</option>
+          {allStates.map(({ label }) => (
+          <option key={idGenerator()} value={label}>{label}</option>
         ))}
         </select>
       </label>
