@@ -33,44 +33,43 @@
       <button id="next">Next color</button>
     </div>
     <script>
-      const btnNext = document.getElementById("next");
-      const btnPrevious = document.getElementById("previous");
-
-      
-      const nextColor = () => {
-        store.dispatch({ type: "NEXT_COLOR", })
-      }
-      
-      const previousColor = () => {
-        store.dispatch({ type: "PREVIOUS_COLOR", })
-      }
-
-      btnNext.addEventListener("click", nextColor);
-      btnPrevious.addEventListener("click", previousColor);
-
       const ESTADO_INICIAL = {
         colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
         index: 0,
       };
+      const btnNext = document.getElementById("next");
+      const btnPrevious = document.getElementById("previous");
+      const NEXT_COLOR = "NEXT_COLOR";
+      const PREVIOUS_COLOR = "PREVIOUS_COLOR";
+      
+      const dispatchChangeColor = (type) => {
+        store.dispatch({ type, })
+      }
+
+      btnNext.addEventListener("click", () => { dispatchChangeColor(NEXT_COLOR) });
+      btnPrevious.addEventListener("click", () => { dispatchChangeColor(PREVIOUS_COLOR) });
+
 
       const reducer = (state = ESTADO_INICIAL, action) => {
+        const indexOnArray = state.index;
+        const arrayLength = state.colors.length
         switch(action.type) {
           case "NEXT_COLOR":
             return {
               ...state,
-              index: state.index === (state.colors.length - 1) ? state.index : state.index + 1
+              index: indexOnArray === ( arrayLength - 1) ? indexOnArray : indexOnArray + 1
             };
           case "PREVIOUS_COLOR":
             return {
               ...state,
-              index: state.index === 0 ? state.index : state.index - 1
+              index: indexOnArray === 0 ? indexOnArray : indexOnArray - 1
             };
 
           default:
             return state;
         }
       }
-      const store = Redux.createStore(reducer);
+      const store = Redux.createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
       store.subscribe(() => {
         const value = document.getElementById('value');
