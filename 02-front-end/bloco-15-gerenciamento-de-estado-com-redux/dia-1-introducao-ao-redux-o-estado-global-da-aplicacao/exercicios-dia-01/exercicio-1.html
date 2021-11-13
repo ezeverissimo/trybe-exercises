@@ -53,13 +53,14 @@
       const reducer = (state = ESTADO_INICIAL, action) => {
         const indexOnArray = state.index;
         const arrayLength = state.colors.length
+
         switch(action.type) {
-          case "NEXT_COLOR":
+          case NEXT_COLOR:
             return {
               ...state,
               index: indexOnArray === ( arrayLength - 1) ? indexOnArray : indexOnArray + 1
             };
-          case "PREVIOUS_COLOR":
+          case PREVIOUS_COLOR:
             return {
               ...state,
               index: indexOnArray === 0 ? indexOnArray : indexOnArray - 1
