@@ -17,6 +17,9 @@ try {
 }
 }
 
-mathResult(9, 9, 9);
-mathResult(1, 1, 1);
-mathResult(9, '9', 9);
+const num1 = Math.floor(Math.random() * 100 + 1);
+const num2 = Math.floor(Math.random() * 100 + 1);
+const num3 = Math.floor(Math.random() * 100 + 1);
+
+
+mathResult(num1, num2, num3);
